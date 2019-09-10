@@ -56,7 +56,7 @@ function gotResult(err, results) {
 
 function draw(){
   background(255);
-  fill(0);
+
   //textSize(30);
   //text(label,10,yPos);
 

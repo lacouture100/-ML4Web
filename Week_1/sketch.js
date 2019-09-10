@@ -20,15 +20,14 @@ let label = '';
 let prob = '';
 let yPos =1;
 let j=0;
-let m = 0;
 
 let index = 0;
 function setup() {
-  canvas =createCanvas(600,4000);
-
+  canvas =createCanvas(400,4000);
+  canvas.rotate(PI);
   // Create a camera input
   video = createCapture(VIDEO);
-  video.position(600,0);
+  video.position(410,0);
   // Initialize the Image Classifier method with MobileNet and the video as the second argument
   classifier = ml5.imageClassifier('MobileNet', video, modelReady);
   resultsP = createP('Loading model and video...');
@@ -60,26 +59,25 @@ function gotResult(err, results) {
 }
 
 function draw(){
-  background(0);
+  background(255);
 
   //textSize(30);
   //text(label,10,yPos);
-  // var scaleAmount = mouseX / 100;
-  //   	scale(scaleAmount);
+  ///var scaleAmount = mouseX / 100;
+    //	scale(scaleAmount);
 
   for (var i=0;i<resultArray.length;i++){
-    stroke(1);
+    stroke(2);
     if(resultArray[i]==resultArray[i-1]){
-      fill(color(j,0,0));
+      fill(j,1,0);
       j+=1;
     }else{
-      fill(i,i,i);
+      fill(255);
     }
 
     textAlign(CENTER);
-    text(resultArray[i],200,(i+yPos)*3,width);
-    m = map(value, 0,probArray[i]*100 , 0, width);
-    textSize(int(m));
+    text(resultArray[i],200,(i+yPos)*3);
+    textSize(probArray[i]*100);
     //yPos+=1;
     if(yPos > height|| yPos < 0){
       i=0;
@@ -87,26 +85,6 @@ function draw(){
     }
 
   }
-function mousePressed{
-  for (var i=0;i<resultArray.length;i++){
-    stroke(1);
-    if(resultArray[i]==resultArray[i-1]){
-      fill(color(j,0,0));
-      j+=1;
-    }else if (resultArray.includes(i)==false) {
-      fill(color(0,0,255));
-    }
-    else(){
-      fill(i,i,i);
-    }
 
-    textAlign(CENTER);
-    rect(resultArray[i],200,(i+yPos)*3,width);
-    m = map(value, 0,probArray[i]*100 , 0, width);
 
-    //yPos+=1;
-    if(yPos > height|| yPos < 0){
-      i=0;
-      yPos= -yPos;
-    }
 }

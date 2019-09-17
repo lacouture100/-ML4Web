@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Two player game</title>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js" type="text/javascript"></script>
+  <script src="sketch.js"></script>
+  <script src="counter.js"></script>
+
+
+<!-- Bootstrap CSS -->
+
+
+  <style></style>
+</head>
+
+<body>
+  <div class= 'container'>
+    <div class='row'>
+      <div class="column">
+        <h2 class="text-center">Three player Game</h2>
+        <h3 class="text-center">KNN Classification with MobileNet</h3>
+      </div>
+    </div>
+
+    <div class= 'row'>
+      <div class="column" id="videoContainer"></div>
+
+        <div class="column">
+          <p id="status">Loading MobileNet...Please Wait.</p>
+          <!-- <p id="player1Score">Player 1 Score</p>
+          <p id="player2Score">Player 2 Score</p>
+          <p id="player3Score">Player 3 Score</p> -->
+          <!-- <p>I'm <span id="confidence">...</span> % sure<span id="result">...</span> is in front of the camera.</p> -->
+
+          <button id="buttonPredict">Start playing!</button><br />
+          <button id="clearAll">Reset Players</button><br />
+          <div><button id="save">Save Players</button></div>
+          <button id="load">Load Players</button><br />
+          <button id ="buttonPlayAgain"> Play Again </button>
+          <div id='winnerContainer'></div>
+          <div id="sketchHolder"</div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+
+</div>
+          <div class="column">
+            <h3 class="players"> Player 1 </h3><br />
+            <p><span id="examplePlayer1">0</span> Images saved</p>
+            <button id="addClassPlayer1">Add Player 1 picture</button><br />
+            <button id="resetPlayer1">Reset Player1</button><br />
+            <!-- <p>| Confidence in Player1 is: <span id="confidencePlayer1">0</span></p> -->
+          </div>
+          <div class=column>
+            <h3 class="players"> Player 2 </h3><br />
+            <p><span id="examplePlayer2">0</span> Images saved</p>
+            <button id="addClassPlayer2">Add Player 2 picture</button><br />
+            <button id="resetPlayer2">Reset Player2</button>
+            <!-- <p>| Confidence in Player2 is: <span id="confidencePlayer2">0</span></p> -->
+          </div>
+          <div class="column">
+            <h3 class="players"> Player 3 </h3><br />
+            <p><span id="examplePlayer3">0</span> Images saved</p>
+            <button id="addClassPlayer3">Add Player 3 picture</button><br />
+            <button id="resetPlayer3">Reset Player3</button>
+            <!-- <p>| Confidence in Player3 is: <span id="confidencePlayer3">0</span></p> -->
+          </div>
+
+          <div class=column>
+
+
+          </div>
+        </div>
+
+
+  </div>
+</body>
+
+</html>

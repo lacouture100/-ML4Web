@@ -40,7 +40,7 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(width, height);
   img = loadImage('assets/insideSubway2.png');
-  trainVideo=createVideo('assets/outsideSubway2.mp4',vidLoad);
+  trainVideo=createVideo('assets/outsideSubway_short.mp4',vidLoad);
   trainVideo.size(1280,720);
 
   // Create a new poseNet method with a single detection
@@ -75,7 +75,7 @@ function draw() {
     translate(width,0);
 
     image(img,imagePosX-width*1.75,imagePosY-200,1600,900);
-    
+
 
 }
 

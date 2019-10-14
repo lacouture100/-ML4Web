@@ -17,4 +17,4 @@ Week 4 - Human chasing Camera, a webcam that chases you around.
 Week 5 - Style Transfer
 
 
-WWeek 6 - Pix2pix
+Week 6 - Pix2pix

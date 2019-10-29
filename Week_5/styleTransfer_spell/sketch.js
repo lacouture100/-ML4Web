@@ -12,16 +12,20 @@ This uses a pre-trained model of The Great Wave off Kanagawa and Udnie (Young Am
 let style;
 let video;
 let resultImg;
+let width = 400;
+let height = 400;
+
+
 
 function setup() {
-  createCanvas(320, 240).parent('canvasContainer');
+  createCanvas(width, height).parent('canvasContainer');
 
   video = createCapture(VIDEO);
-  video.hide();
+  //video.hide();
 
   // The results image from the style transfer
-  resultImg = createImg('');
-  resultImg.hide();
+  resultImg = createImg(video);
+  resultImg.size(width,height),
 
   // Create a new Style Transfer method with a defined style.
   // We give the video as the second argument
@@ -29,7 +33,8 @@ function setup() {
 }
 
 function draw(){
-  image(resultImg, 0, 0, 320, 240);
+  image(resultImg, 0, 0, width, height);
+  image(video, 0, 0, width, height);
 }
 
 // A function to call when the model has been loaded.

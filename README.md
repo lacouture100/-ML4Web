@@ -20,16 +20,3 @@ Week 5 - Style Transfer
 Week 6 - Pix2pix
 
 
-Week 7
-
-
-Week 8
-
-
-Week 9
-
-
-Week 10
-
-
-Week 11
